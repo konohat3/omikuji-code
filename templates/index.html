@@ -14,17 +14,25 @@
         h1 {
             font-size: 32px;
             color: #8B0000;
+            margin-bottom: 30px;
         }
         input[type="text"] {
             font-family: 'Yuji Syuku', serif;
             padding: 10px;
             font-size: 18px;
+            width: 250px;
+            background-color: #f0f8ff;
+            border: 1px solid #ccc;
         }
         input[type="submit"] {
             font-family: 'Yuji Syuku', serif;
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 5px;
         }
         .error {
             color: red;
@@ -34,9 +42,9 @@
     </style>
 </head>
 <body>
-    <h1>おみくじコード入力</h1>
+    <h1>おみくじコードを入力してください</h1>
     <form method="post">
-        <input type="text" name="code" placeholder="コードを入力してください" required>
+        <input type="text" name="code" placeholder="例：T259999" required>
         <br>
         <input type="submit" value="送信">
     </form>
@@ -45,3 +53,4 @@
     {% endif %}
 </body>
 </html>
+
