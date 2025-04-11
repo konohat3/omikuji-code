@@ -2,51 +2,56 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おみくじ結果</title>
     <style>
         body {
             font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
             text-align: center;
             background-color: #fffaf5;
-            padding: 50px;
+            padding: 40px 20px;
         }
         h1 {
-            font-size: 32px;
+            font-size: 28px;
             color: #8B0000;
             margin-bottom: 20px;
         }
         img {
-            width: 450px;
+            width: 90%;
+            max-width: 450px;
             margin-bottom: 30px;
         }
         .dice {
             font-size: 22px;
-            margin: 10px;
+            margin: 10px 0;
         }
         .message {
             margin-top: 30px;
             font-size: 16px;
+            padding: 0 10px;
         }
         #resultBox {
             display: none;
         }
         #drawBtn {
             font-size: 18px;
-            padding: 10px 20px;
+            padding: 14px 24px;
             background-color: #8B0000;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
-            display: block;
             margin: 20px auto;
+            display: block;
+            width: 80%;
+            max-width: 300px;
         }
     </style>
 </head>
 <body>
     <h1>おみくじ</h1>
     <img src="{{ url_for('static', filename='torii.jpg') }}" alt="鳥居">
-    
+
     <button id="drawBtn" onclick="showResult()">おみくじを引く</button>
 
     <div id="resultBox">
