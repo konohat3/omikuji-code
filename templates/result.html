@@ -38,6 +38,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            display: block;
+            margin: 20px auto;
         }
     </style>
 </head>
@@ -45,10 +47,8 @@
     <h1>おみくじ</h1>
     <img src="{{ url_for('static', filename='torii.jpg') }}" alt="鳥居">
     
-    <!-- おみくじを引くボタン -->
     <button id="drawBtn" onclick="showResult()">おみくじを引く</button>
 
-    <!-- 非表示の結果エリア -->
     <div id="resultBox">
         <div class="dice">🎲 上：{{ top }}</div>
         <div class="dice">🎲 下：{{ bottom }}</div>
@@ -63,4 +63,3 @@
     </script>
 </body>
 </html>
-
