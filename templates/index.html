@@ -2,28 +2,36 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おみくじコード入力</title>
     <style>
         body {
             font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
             text-align: center;
             background-color: #fffaf5;
-            padding: 50px;
+            padding: 40px 20px;
         }
         h1 {
-            font-size: 32px;
+            font-size: 28px;
             color: #8B0000;
             margin-bottom: 30px;
         }
         input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            width: 250px;
+            padding: 14px;
+            font-size: 18px;
+            width: 80%;
+            max-width: 300px;
+            box-sizing: border-box;
         }
         input[type="submit"] {
             margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 14px 24px;
+            font-size: 18px;
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
         }
         .error {
             color: red;
@@ -40,7 +48,4 @@
         <input type="submit" value="送信">
     </form>
     {% if error %}
-        <p class="error">{{ error }}</p>
-    {% endif %}
-</body>
-</html>
+        <p class="error">{{ error
